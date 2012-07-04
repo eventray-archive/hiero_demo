@@ -10,7 +10,7 @@ requires = [
     'pyramid',
     'pyramid_debugtoolbar',
     'waitress',
-    ]
+]
 
 setup(name='hiero_demo',
       version='0.0',
@@ -35,6 +35,8 @@ setup(name='hiero_demo',
       entry_points = """\
       [paste.app_factory]
       main = hiero_demo:main
+      [console_scripts]
+      init_hiero_demo_db = hiero_demo.scripts.initializedb:main
       """,
       )
 
