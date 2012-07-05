@@ -4,10 +4,11 @@ from hiero.models               import UserMixin
 from hiero.models               import UserGroupMixin
 from hiero.models               import ActivationMixin
 from hiero.models               import BaseModel
+from hiero.models.blog          import CategoryMixin
+from hiero.models.blog          import EntryAssociationMixin
+from hiero.models.blog          import EntryMixin
 from hiero.models.blog          import EntryTagMixin
 from hiero.models.blog          import TagMixin
-from hiero.models.blog          import CategoryMixin
-from hiero.models.blog          import EntryMixin
 from hiero.models.blog          import SeriesMixin
 from zope.sqlalchemy            import ZopeTransactionExtension
 
@@ -38,11 +39,14 @@ class EntryTag(EntryTagMixin, Base):
 class Tag(TagMixin, Base):
     pass
 
-class CategoryMixin(CategoryMixin, Base):
+class Category(CategoryMixin, Base):
     pass
 
-class EntryMixin(EntryMixin, Base):
+class Entry(EntryMixin, Base):
     pass
 
-class SeriesMixin(SeriesMixin, Base):
+class EntryAssociation(EntryAssociationMixin, Base):
+    pass
+
+class Series(SeriesMixin, Base):
     pass
