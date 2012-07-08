@@ -16,10 +16,8 @@ def main(global_config, **settings):
     config.add_route('favicon', '/favicon.ico')
     config.add_view('hiero_demo.views.favicon_view', route_name='favicon')
 
-    config.add_route('home', '/')
-
     #config.include('hiero', route_prefix='/blog')
-    config.include('hiero')
+    config.include('hiero', route_prefix='blog')
 
     config.scan()
 
