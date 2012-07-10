@@ -10,6 +10,9 @@ requires = [
     'pyramid',
     'pyramid_debugtoolbar',
     'waitress',
+    'hiero',
+    'horus',
+    'deform_bootstrap'
 ]
 
 setup(name='hiero_demo',
