@@ -1,4 +1,3 @@
-import os
 from pyramid.response import FileResponse
 from pkg_resources      import resource_filename
 
